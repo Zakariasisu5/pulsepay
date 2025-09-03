@@ -33,6 +33,7 @@ export default defineConfig({
   },
   define: {
     global: 'globalThis',
+    require: 'undefined',
     'process.env.NODE_ENV': '"development"'
   }
 });
