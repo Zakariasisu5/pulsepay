@@ -16,18 +16,9 @@ export default function App() {
     <AuthProvider>
       <div className="main-content">
         <Navbar/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/plans" element={<Plans />} />
-        </Routes>
-        <About/>
-        <Chatbot/>
+        <Home />
         <Footer/>
       </div>
-      
     </AuthProvider>
   );
 }
