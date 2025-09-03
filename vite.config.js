@@ -9,6 +9,7 @@ import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfil
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
+    exclude: ['viem'],
     esbuildOptions: {
       define: {
         global: 'globalThis',
@@ -26,6 +27,10 @@ export default defineConfig({
       buffer: 'buffer',
       stream: 'stream-browserify',
       process: 'process/browser',
+      viem: 'viem/dist/index.js'
     },
   },
+  define: {
+    'process.env.NODE_ENV': '"development"'
+  }
 });
