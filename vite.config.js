@@ -8,6 +8,7 @@ import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfil
 
 export default defineConfig({
   plugins: [react()],
+  base: process.env.VITRE_BASE_PATH || '/pulsepay',
   optimizeDeps: {
     exclude: ['viem'],
     esbuildOptions: {
