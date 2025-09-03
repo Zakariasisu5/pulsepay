@@ -1,7 +1,5 @@
 import { useAuth } from "../utils/AuthContext";
 import { useState } from "react";
-import Web3Modal from "web3modal";
-import WalletConnectProvider from "@walletconnect/web3-provider";
 import { useNavigate } from "react-router-dom";
 import '../index.css';
 
