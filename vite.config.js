@@ -27,8 +27,11 @@ export default defineConfig({
     alias: {
       buffer: 'buffer',
       stream: 'stream-browserify',
-      process: 'process/browser'
-      // Removed viem alias to avoid missing file errors
+      process: 'process/browser',
+  // Do not use require.resolve in ESM Vite config
+  // Only alias if you have a custom path, otherwise omit
+  // react: 'react',
+  // 'react-dom': 'react-dom',
     },
   },
   define: {
